@@ -40,6 +40,15 @@ class Member{
         return isbn.hashCode();
     }
 
+    @Override
+    public String toString() {
+        return "Member{" +
+                "Member Id ='" + memberId + '\'' +
+                ", Name ='" + name + '\'' +
+                ", Email ='" + email + '\'' +
+                '}';
+    }
+
     public boolean canBorrow(){
         return borrowedBooks.size() < MAX_BORROWED_BOOKS;
     }
