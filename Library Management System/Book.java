@@ -51,4 +51,15 @@ class Book{
     public void returnBook(){
         status = BookStatus.AVAILABLE;
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "isbn='" + isbn + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", publicationYear=" + publicationYear +
+                ", status=" + status +
+                '}';
+    }
 }
