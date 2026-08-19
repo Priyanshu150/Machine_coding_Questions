@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.*;
 
 enum BookStatus {
     AVAILABLE,
@@ -18,6 +18,28 @@ class Book{
         this.author = author;
         this.publicationYear = publicationYear;
         status = BookStatus.AVAILABLE;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        // equality based on ISBN
+        // same object ?? 
+        // it is a book 
+        // compare ISBN
+        if(this == obj)
+            return true;
+        
+        if (!(obj instanceof Book other)) {
+            return false;
+        }
+
+        return isbn.equals(other.isbn);
+    }
+
+    @Override
+    public int hashCode(){
+        // hash based on ISBN
+        return isbn.hashCode();
     }
     
     public String getISBN(){
