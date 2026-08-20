@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Member{
-    private int memberId;
+    private final int memberId;
     private String name;
     private String email;
     private Set<Book> borrowedBooks;
@@ -27,20 +27,6 @@ class Member{
     }
 
     @Override
-    public boolean equals(Object obj){
-        // equality based on ISBN
-        // same object ?? 
-        // it is a book 
-        // compare ISBN
-    }
-
-    @Override
-    public int hashCode(){
-        // hash based on ISBN
-        return isbn.hashCode();
-    }
-
-    @Override
     public String toString() {
         return "Member{" +
                 "Member Id ='" + memberId + '\'' +
@@ -63,9 +49,17 @@ class Member{
         }
     }
 
+    public boolean hasBook(Book book){
+        return (borrowedBooks.contains(book));
+    }
+
     public void returnBook(Book book){
         if (!borrowedBooks.remove(book)) {
             throw new IllegalStateException("Member has not borrowed this book");
         }
+    }
+
+    public Set<Book> getBorrowedBooks(){
+        return Collections.unmodifiableSet(borrowedBooks);
     }
 }

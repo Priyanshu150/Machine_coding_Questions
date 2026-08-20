@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.*;
 
 class Library{
     private final BookManager bookManager;
@@ -20,7 +20,7 @@ class Library{
         // 2. Find book
         Optional<Book> bookOptional = bookManager.findBook(isbn);
 
-        if (bookOptional.isEmpty()) {
+        if (bookOptional.isEmpty()) { 
             throw new IllegalStateException("Book not found");
         }
 
@@ -75,6 +75,6 @@ class Library{
         Member member = memberManager.find(memberId)
             .orElseThrow(() -> new IllegalStateException("Member not found"));
         
-        member.getBorrowedBook().forEach(System.out::println);
+        member.getBorrowedBooks().forEach(System.out::println);
     }
 }
