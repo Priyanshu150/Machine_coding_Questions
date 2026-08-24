@@ -20,7 +20,7 @@ abstract class Employee{
         status = EmployeeStatus.ACTIVE;
     }
 
-    public int getId(){
+    public int getEmpoloyeeId(){
         return employeeId;
     }
 
