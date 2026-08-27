@@ -40,5 +40,9 @@ abstract class Employee{
         return status;
     }
 
+    public void changeStatus(EmployeeStatus status) {
+        this.status = status;
+    }
+
     public abstract double calculateSalary();
 }
