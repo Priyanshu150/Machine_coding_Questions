@@ -119,7 +119,11 @@ Level 1 ──► Level 2 ──► Level 3 ──► Level 4 ──► Level 5
   OOP       Collections   Design      Real MC     Interview
 Foundation  + Features   Thinking    Problems     Ready 🎯
 ```
-
+Q1 → Map / Set / equals / hashCode / encapsulation
+Q2 → inheritance / polymorphism / OCP
+Q3 → Strategy Pattern / composition / immutable snapshots
+Q4 → Predicate / Function / Consumer / Supplier / Streams
+Q5 → Strategy + polymorphism + dependency injection + state transitions + exception handling
 ---
 
 > 💡 **Tip:** Each problem folder should contain a `README.md` with the problem statement, requirements, and class diagram, alongside the solution code.
